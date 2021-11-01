@@ -28,7 +28,7 @@ export default {
 		onBeforeMount(() => {
 			window.scroll(0, 0);
 			fetch(
-				`http://www.omdbapi.com/?apikey=${env.apiKey}&i=${route.params.id}&plot=full`
+				`https://www.omdbapi.com/?apikey=${env.apiKey}&i=${route.params.id}&plot=full`
 			)
 				.then((res) => res.json())
 				.then((data) => {

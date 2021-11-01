@@ -77,7 +77,7 @@ export default {
 				if (search.value !== '') {
 					loader = true;
 					let response = await fetch(
-							`http://www.omdbapi.com/?apikey=${env.apiKey}&s=${search.value}`
+							`https://www.omdbapi.com/?apikey=${env.apiKey}&s=${search.value}`
 						),
 						json = await response.json();
 
@@ -100,7 +100,7 @@ export default {
 		};
 
 		onBeforeMount(() => {
-			fetch(`http://www.omdbapi.com/?apikey=${env.apiKey}&s=marvel`)
+			fetch(`https://www.omdbapi.com/?apikey=${env.apiKey}&s=marvel`)
 				.then((res) => res.json())
 				.then((data) => (movies.value = data.Search));
 		});
