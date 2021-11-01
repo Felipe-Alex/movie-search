@@ -1,30 +1,93 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+	<navigation />
+	<main>
+		<router-view />
+	</main>
 </template>
 
+<script>
+import Navigation from '@/components/Navigation.vue';
+export default {
+	components: {
+		Navigation,
+	},
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html {
+	scroll-behavior: smooth;
+	white-space: normal;
 }
 
-#nav {
-  padding: 30px;
+* {
+	box-sizing: border-box;
+	font-size: 15px;
+	margin: 0;
+	overflow-x: hidden;
+	color: #fff;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+body {
+	background-image: linear-gradient(
+		to bottom,
+		#1a1a2e,
+		#1c203a,
+		#1c2646,
+		#182d53,
+		#0f3460
+	);
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100%;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+h1 {
+	margin: 0;
+	font-size: 2rem;
+}
+
+h2 {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+h3 {
+	margin: 0;
+	font-size: 1.25rem;
+}
+
+h4 {
+	margin: 0;
+	font-size: 1rem;
+}
+
+h5 {
+	margin: 0;
+	font-size: 0.85rem;
+}
+
+h6 {
+	margin: 0;
+	font-size: 0.7rem;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+p {
+	line-height: 1.6;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 </style>
