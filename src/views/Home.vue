@@ -89,7 +89,6 @@ export default {
 						setTimeout(() => {
 							error.value = false;
 						}, 2000);
-						console.log(json.Error);
 					}
 					search.value = '';
 				}
