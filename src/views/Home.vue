@@ -28,8 +28,8 @@
 		</div>
 
 		<transition name="error-msg">
-			<div class="error">
-				<p v-if="error">
+			<div class="error" v-if="error">
+				<p>
 					Movie not found!
 				</p>
 			</div>
@@ -222,52 +222,43 @@ export default {
 		}
 	}
 
-	// .error-msg-enter-active,
-	// .error-msg-leave-active {
-	// 	transition: opacity 0.4s ease-in-out;
-	// }
-
 	.error-msg-enter-active {
-		animation: move 0.6s linear infinite;
+		animation: move 1s;
 	}
 
-	// .error-msg-leave-active {
-	// 	transition: all 0.6s ease;
-	// }
-
-	// .error-msg-leave-from {
-	// 	opacity: 1;
-	// 	transform: translateX(0px);
-	// }
-
-	// .error-msg-leave-to {
-	// 	opacity: 0;
-	// 	transform: translateX(0px);
-	// }
+	.error-msg-leave-active {
+		animation: move 1s reverse;
+	}
 
 	@keyframes move {
 		0% {
 			transform: translateX(0px);
 		}
 		25% {
+			transform: translateX(10px);
+		}
+		35% {
 			transform: translateX(-10px);
 		}
+		45% {
+			transform: translateX(10px);
+		}
+		55% {
+			transform: translateX(-10px);
+		}
+		65% {
+			transform: translateX(10px);
+		}
 		75% {
+			transform: translateX(-10px);
+		}
+		85% {
 			transform: translateX(10px);
 		}
 		100% {
-			transform: translateX(0px);
+			transform: translateX(-10px);
 		}
 	}
-
-	// .error-msg-enter-from,
-	// .error-msg-leave-to {
-	// 	opacity: 0;
-	// }
-
-	// .error-msg-enter-to {
-	// 	opacity: 1;
-	// }
 
 	.loader {
 		display: flex;
